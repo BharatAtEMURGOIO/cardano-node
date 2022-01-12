@@ -24,12 +24,13 @@ import           Cardano.CLI.Shelley.Run (ShelleyClientCmdError, renderShelleyCl
 
 import           Cardano.CLI.Render (customRenderHelp)
 
-import           Cardano.Config.Git.Rev (gitRev)
+import           Cardano.Git.Rev (gitRev)
 import           Data.Version (showVersion)
+import           Options.Applicative.Help.Core
+import           Options.Applicative.Types (OptReader (..), Option (..), Parser (..),
+                   ParserInfo (..), ParserPrefs (..))
 import           Paths_cardano_cli (version)
 import           System.Info (arch, compilerName, compilerVersion, os)
-import           Options.Applicative.Types (Option (..), OptReader (..), Parser (..), ParserInfo (..), ParserPrefs (..))
-import           Options.Applicative.Help.Core
 
 import qualified Data.List as L
 import qualified System.IO as IO
