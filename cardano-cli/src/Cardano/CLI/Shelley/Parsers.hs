@@ -678,6 +678,7 @@ pTransaction =
             <*> many pMetadataFile
             <*> optional pProtocolParamsSourceSpec
             <*> optional pUpdateProposalFile
+            <*> pOutputSerialisation
             <*> pTxBodyFile Output
 
   pChangeAddress :: Parser TxOutChangeAddress
